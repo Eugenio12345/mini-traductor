@@ -92,9 +92,9 @@ public class MainView extends JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        sourceLanguaje.setModel(new DefaultComboBoxModel(new String[] { "Español", "Ingles" }));
+        sourceLanguaje.setModel(new DefaultComboBoxModel(new String[] { "Español", "Ingles", "Portugues", "Frances", "Aleman" }));
 
-        targetLanguaje.setModel(new DefaultComboBoxModel(new String[] { "Ingles", "Español" }));
+        targetLanguaje.setModel(new DefaultComboBoxModel(new String[] { "Ingles", "Español", "Portugues", "Frances", "Aleman" }));
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);

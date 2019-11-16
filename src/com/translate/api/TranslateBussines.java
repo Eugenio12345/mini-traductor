@@ -15,11 +15,13 @@ public class TranslateBussines {
 		try {
 			source = this.validateLanguage(source);
 			target = this.validateLanguage(target);
+			String idioma = GoogleTranslate.detectLanguage(text);
+			LOGGER.info("Detectando lenguaje: "+ idioma);
 			LOGGER.info("source:::: "+source);
 			LOGGER.info("target:::: "+target);
 			message = GoogleTranslate.translate(source, target, text);
 		} catch (IOException e) {
-			message ="Ocurrio un error al traducir razon: "+e.getMessage();
+			message ="Ocurrio un error al traducir, motivo: "+e.getMessage();
 		}
 		return message;
 	}
@@ -28,6 +30,10 @@ public class TranslateBussines {
 		Map<String, String>languages = new HashMap<>();
 		languages.put("Español", "es");
 		languages.put("Ingles", "en");
+		languages.put("Portugues", "pt");
+		languages.put("Frances", "fr");
+		languages.put("Aleman", "de");
+		
 		return languages.get(text);
 	}
 }
